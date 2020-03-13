@@ -51,3 +51,4 @@ tool/node_modules/
 
 # Ignore db_conf.json file
 tool/src/db_conf.json
+
