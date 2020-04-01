@@ -90,6 +90,8 @@ const unreviewedTasks = function (paramsKeys) {
       customSqls['custom1'] = `and tag like '%' || $${i} || '%'`;
     } else if (paramsKeys[i - 1] === 'student_name') {
       customSqls['custom2'] = `and lower(user_name) like '%' || $${i} || '%'`;
+    } else if (paramsKeys[i - 1] === 'challenge_id') {
+      customSqls['custom3'] = `and challenge_id = $${i}`;
     }
   }
 
@@ -123,6 +125,7 @@ const unreviewedTasks = function (paramsKeys) {
     where 1 = 1
     and score is null
     ${customSqls.custom2 || ''}
+    ${customSqls.custom3 || ''}
     order by user_id, submitted_at asc;`;
 
   return sql;

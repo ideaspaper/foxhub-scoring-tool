@@ -120,14 +120,24 @@ const yargs = require('yargs')
             nargs: 1,
             demandOption: false
           })
+          .option('c', {
+            alias: 'challenge_id',
+            description: 'Challenge ID',
+            type: 'number',
+            nargs: 1,
+            demandOption: false
+          })
           .check((argv) => {
-            if (!argv.student_name && !argv.week) {
+            if (!argv.student_name && !argv.week && !argv.challenge_id) {
               throw (new Error(constants.yargsDemandAtLeastOneOption));
             }
             if (argv.student_name && !isNaN(argv.student_name)) {
               throw (new Error(constants.yargsArgvCheckFailed));
             }
             if (argv.week && isNaN(argv.week)) {
+              throw (new Error(constants.yargsArgvCheckFailed));
+            }
+            if (argv.challenge_id && isNaN(argv.challenge_id)) {
               throw (new Error(constants.yargsArgvCheckFailed));
             }
             return true;
