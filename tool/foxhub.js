@@ -6,7 +6,7 @@
  *         └──> [instructors] ═════> [n|name]
  *         └──> [students---] ═════> [n|name, b|batch]
  *         └──> [tasks------] ─────> [list-------] ═════> [w|week]
- *                              └──> [unreviewed-] ═════> [n|student_name, w|week]
+ *                              └──> [unreviewed-] ═════> [n|student_name, w|week, c|challenge_id]
  *                              └──> [reviewed---] ═════> [n|student_name, w|week]
  *                              └──> [review-----] ═════> [s|score, f|feedback, i|instructor_id, t|task_id]
  * Legend:
