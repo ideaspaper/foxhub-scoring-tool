@@ -2,7 +2,7 @@
 
 ## Description
 
-Since the performance of Hacktiv8's Foxhub website is bad. That makes scoring students' submissions an exhausting task. This project is aimed to make scoring process faster without using Foxhub website. Instead, scoring can be done through CLI alone.
+Since Hacktiv8's Foxhub website load very slowly, that makes scoring students' submissions an exhausting task. This project is aimed to make scoring process faster without using Foxhub website. Instead, scoring can be done through CLI alone.
 
 ## Installation
 
